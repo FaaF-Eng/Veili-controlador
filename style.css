@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10%; /* Move a DIV para 50% do topo */
+    top: 15%; /* Move a DIV para 50% do topo */
     left: 1%; /* Move a DIV para 50% da esquerda */
     transform: translate(0, -100%); /* Centraliza a DIV */
     height: 8vh;
