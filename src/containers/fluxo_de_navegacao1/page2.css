@@ -13,32 +13,28 @@ body{
     z-index: 1;
     user-select: none;
 }
-
 .imagens{
     position: fixed;
-    display: flex;
-    flex-direction: column;     /* Empilha as imagens em coluna */
-    justify-content: center;    /* Centraliza verticalmente */
     align-items: center;        /* Centraliza horizontalmente */
     text-align: center;
     height: 100vh;              /* Ocupa a tela toda */
-    gap: 110px;
+    gap: 0px;
     top:0;
     left: 0;
     right: 0;
     z-index: 4;
     user-select: none;
 }
-#veili_logo, #sd_card, #alerta{
+#veili_logo{
     height: auto;
     width: 200px;   
     user-select: none;
 }
 .mensagem{
-    font-size: 40px;
+    font-size: 30px;
     position: relative;
     text-align: center;
-    top:450px;
+    top:200px;
     z-index: 2;
     user-select: none;
 }
