@@ -18,7 +18,13 @@
   left: 500px;
   z-index: 1;
   user-select: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
+.imagensHome:hover{
+  transform: scale(1.1);
+}
+
 
 .diagonal { /*Barra Laranja*/
   position: fixed;
@@ -47,7 +53,7 @@
     cursor: pointer;
 }
 .veili_logo:hover{  /*Animação Imagem da Veili*/
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 
