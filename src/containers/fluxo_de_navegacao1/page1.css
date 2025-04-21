@@ -1,0 +1,45 @@
+body{
+    background-color:#FAF9F6;
+}
+
+.diagonal { /*Barra Laranja*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #f3870c; /* Cor por cima */
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 2%);
+    /* Isso cria um "triângulo" inclinado */
+    z-index: 1;
+    user-select: none;
+}
+
+.imagens{
+    position: fixed;
+    display: flex;
+    flex-direction: column;     /* Empilha as imagens em coluna */
+    justify-content: center;    /* Centraliza verticalmente */
+    align-items: center;        /* Centraliza horizontalmente */
+    text-align: center;
+    height: 100vh;              /* Ocupa a tela toda */
+    gap: 130px;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    user-select: none;
+}
+#veili_logo, #sd_card, #alerta{
+    height: auto;
+    width: 200px;   
+    user-select: none;
+}
+.mensagem{
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    top:450px;
+    z-index: 2;
+    user-select: none;
+}

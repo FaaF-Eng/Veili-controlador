@@ -1,3 +1,7 @@
+body{
+  background-color:#FAF9F6;
+}
+
 
 .titulo{ /*Titulo da Página*/
   font-size: 40px;
@@ -57,3 +61,11 @@
 }
 
 
+.footer{
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
