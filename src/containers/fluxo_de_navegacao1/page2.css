@@ -35,25 +35,29 @@ body,html{
     font-size: 30px;
     position: relative;
     text-align: center;
-    top:200px;
-    z-index: 2;
+    top:50px;
+    z-index: 3;
     user-select: none;
 }
 
 .tela { /* Ocupa a tela toda - Serve para arrumar os botões*/
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 120vh; /* altura da tela */
+    left: 740px;
   }
   
   .grid-botoes { /* Organiza os botões em grid*/
+    position: fixed;
     display: grid;
     grid-template-columns: repeat(3, 80px); /* 3 colunas fixas */
     grid-template-rows: repeat(4, 80px);    /* 4 linhas fixas */
     gap: 10px;
   }
   .grid-botoes button {
+
     background-color: #f3870c;
     color: white;
     border: none;
