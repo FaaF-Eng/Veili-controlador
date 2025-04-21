@@ -1,17 +1,26 @@
 
-.titulo{
-  font-size: X-large;
+.titulo{ /*Titulo da Página*/
+  font-size: 40px;
   position: relative;
   text-align: center;
-  top:180px;
+  top:170px;
   z-index: 2;
-
+  user-select: none;
 
 }
-.container{
-  background-color:red;
+
+.imagensHome{
+
+  font-size: X-large;
+  position: fixed;
+  text-align: center;
+  top:250px;
+  left: 500px;
+  z-index: 1;
+  user-select: none;
 }
-.diagonal {
+
+.diagonal { /*Barra Laranja*/
   position: fixed;
   top: 0;
   right: 0;
@@ -21,9 +30,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 2%);
   /* Isso cria um "triângulo" inclinado */
   z-index: 1;
+  user-select: none;
 }
 
-.veili_logo{
+.veili_logo{ /*Imagem da Veili no canto*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +43,11 @@
     transform: translate(0, -100%); /* Centraliza a DIV */
     height: 8vh;
     user-select: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.veili_logo:hover{  /*Animação Imagem da Veili*/
+  transform: scale(1.5);
 }
 
 
