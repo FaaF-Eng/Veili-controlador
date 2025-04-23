@@ -1,69 +1,70 @@
-body,html{
-    background-color:#FAF9F6;
+body, html {
+    background-color: #FAF9F6;
     height: 100%;
 }
-.diagonal { /*Barra Laranja*/
+
+.diagonal {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 70%;
-    background-color: #f3870c; /* Cor por cima */
+    background-color: #f3870c;
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 2%);
-    /* Isso cria um "triângulo" inclinado */
     z-index: 1;
     user-select: none;
 }
-.imagens{
+
+.imagens {
     position: fixed;
-    align-items: center;        /* Centraliza horizontalmente */
+    align-items: center;
     text-align: center;
-    height: 100vh;              /* Ocupa a tela toda */
+    height: 100vh;
     gap: 0px;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 4;
     user-select: none;
 }
-#veili_logo{
+
+#veili_logo {
     height: auto;
-    width: 200px;   
+    width: 200px;
     user-select: none;
 }
-.mensagem{
+
+.mensagem {
     font-size: 30px;
     position: relative;
     text-align: center;
-    top:50px;
+    top: 50px;
     z-index: 3;
     user-select: none;
 }
 
-.tela { /* Ocupa a tela toda - Serve para arrumar os botões*/
 
+.tela {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh; /* altura da tela */
+    height: 120vh;
     left: 740px;
-  }
-  
-  .grid-botoes { /* Organiza os botões em grid*/
+}
+
+.grid-botoes {
     position: fixed;
     display: grid;
-    grid-template-columns: repeat(3, 80px); /* 3 colunas fixas */
-    grid-template-rows: repeat(4, 80px);    /* 4 linhas fixas */
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(4, 80px);
     gap: 10px;
-  }
-  .grid-botoes button {
+}
 
+.grid-botoes button {
     background-color: #f3870c;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
+    transition: background-color 0.3s;}
