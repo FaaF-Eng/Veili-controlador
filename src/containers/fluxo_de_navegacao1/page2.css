@@ -2,36 +2,12 @@ body, html {
     background-color: #FAF9F6;
     height: 100%;
     margin:0;
+    padding: 0;
+
 }
 
-    /* Container principal da grid */
-    .grid-container {
-        background-color: red;
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr; /* Por exemplo: sidebar | conteúdo | sidebar */
-        grid-template-rows: auto;
-        height: 100%;
-        max-width: 1200px;
-        margin: 0 auto; /* Centraliza horizontalmente */
-        padding: 1rem;
-        box-sizing: border-box;
-        border: 2px solid #ccc; /* Apenas para visualização */
-      }
-  
-      /* Estilo para divs dentro da grid */
-      .grid-container > div {
-        border: 1px dashed #aaa;
-        padding: 1rem;
-      }
-  
-      /* Prevenção: todo conteúdo fora da grid vai dar overflow */
-      body {
-        overflow: hidden;
-      }
 
-
-
-.imagens {
+.imagens {/*Sustenta a logo e a mensagem de digitar a senha*/
     position: fixed;
     align-items: center;
     text-align: center;
@@ -44,43 +20,71 @@ body, html {
     user-select: none;
 }
 
-#veili_logo {
+#veili_logo { /*Formata a posição da logo Veili*/
     height: auto;
     width: 200px;
     user-select: none;
 }
 
-.mensagem {
-    font-size: 30px;
+.mensagem { /*Digite a senha*/
+    font-size: 20px;
     position: relative;
     text-align: center;
-    top: 50px;
+    top: 180px;
     z-index: 3;
     user-select: none;
 }
+#cadastro{
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+    width: 100px;
+    left:635px;
+    top:270px;
+}
 
 
-.tela {
+.tela { /*Sustenta o formato dos botões*/
     display: flex;
     justify-content: center;
     align-items: center;
     height: 120vh;
-    left: 740px;
 }
 
-.grid-botoes {
+.grid-botoes { /*Formato dos botões*/
+    top: 380px; /*Altura dos botões*/
     position: fixed;
     display: grid;
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(4, 80px);
-    gap: 10px;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(4, 40px);
+    gap: 8px;
 }
 
-.grid-botoes button {
+.grid-botoes button { /*Aparência dos botões*/
     background-color: #f3870c;
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 10px;
     cursor: pointer;
     transition: background-color 0.3s;}
+
+.imagem-centralizada{
+    position: fixed;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    gap: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    user-select: none;
+}
+.imagem-centralizada img{
+    
+    height: 700px;
+}
