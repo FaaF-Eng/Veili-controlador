@@ -13,7 +13,7 @@ body, html {
     text-align: center;
     height: 100vh;
     gap: 0px;
-    top: 0;
+    top: 15px;
     left: 0;
     right: 0;
     z-index: 4;
@@ -35,17 +35,27 @@ body, html {
     user-select: none;
 }
 #cadastro{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     position: fixed;
     text-align: center;
     align-items: center;
     user-select: none;
     width: 100px;
-    left:635px;
+    left:625px;
     top:270px;
 }
-
+#mini_veili{
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+    height: auto;
+    width: 80px;
+    top:278px;
+    left: 700px;
+    
+}
 
 .tela { /*Sustenta o formato dos botões*/
     display: flex;
@@ -85,6 +95,5 @@ body, html {
     user-select: none;
 }
 .imagem-centralizada img{
-    
     height: 700px;
 }
