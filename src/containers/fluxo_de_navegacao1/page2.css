@@ -4,12 +4,10 @@ body, html {
     margin:0;
     padding: 0;
     overflow-x: hidden; /* previne scroll lateral */
-
-
 }
 
 
-.imagens {/*Sustenta a logo e a mensagem de digitar a senha*/
+.imagens {/*Sustenta: VEILI_LOGO[OK] , CADASTRO[NOK] , SENHA[OK] , MINI_LOGO[OK] */
     position: fixed;
     align-items: center;
     text-align: center;
@@ -38,26 +36,21 @@ body, html {
     user-select: none;
 }
 #cadastro{
-    font-size: 15px;
-    font-weight: bold;
-    position: fixed;
-    text-align: center;
-    align-items: center;
-    user-select: none;
+    background-color: red;
     width: 100px;
-    left:630px;
-    top:271px;
+    position: fixed;
+    top: 105px; /* Ajuste a posição vertical conforme necessário */
+    left: 530px; /* Ajuste a posição horizontal conforme necessário */
+    font-weight: bold;
 }
 #mini_veili{
-    position: fixed;
-    text-align: center;
-    align-items: center;
-    user-select: none;
-    height: auto;
-    width: 80px;
-    top:278px;
-    left: 700px;
+    width: 100px;
+    position: relative;
+    top: 90px; /* Ajuste a posição vertical conforme necessário */
+    left: 0px; /* Ajuste a posição horizontal conforme necessário */
+
 }
+
 
 .tela { /*Sustenta o formato dos botões*/
     display: flex;
