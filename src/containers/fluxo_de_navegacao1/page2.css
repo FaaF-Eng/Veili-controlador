@@ -3,6 +3,8 @@ body, html {
     height: 100%;
     margin:0;
     padding: 0;
+    overflow-x: hidden; /* previne scroll lateral */
+
 
 }
 
@@ -18,6 +20,7 @@ body, html {
     right: 0;
     z-index: 4;
     user-select: none;
+
 }
 
 #veili_logo { /*Formata a posição da logo Veili*/
@@ -42,8 +45,8 @@ body, html {
     align-items: center;
     user-select: none;
     width: 100px;
-    left:625px;
-    top:270px;
+    left:630px;
+    top:271px;
 }
 #mini_veili{
     position: fixed;
@@ -54,7 +57,6 @@ body, html {
     width: 80px;
     top:278px;
     left: 700px;
-    
 }
 
 .tela { /*Sustenta o formato dos botões*/
@@ -71,6 +73,7 @@ body, html {
     grid-template-columns: repeat(3, 40px);
     grid-template-rows: repeat(4, 40px);
     gap: 8px;
+    z-index: 999;
 }
 
 .grid-botoes button { /*Aparência dos botões*/
@@ -81,6 +84,15 @@ body, html {
     font-size: 10px;
     cursor: pointer;
     transition: background-color 0.3s;}
+
+    #campoSenha{
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+        top: 350px;
+        user-select: none;
+    }
 
 .imagem-centralizada{
     position: fixed;
