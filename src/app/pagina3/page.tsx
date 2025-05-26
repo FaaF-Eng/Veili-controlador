@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function page3(){
     return(
         <div className=' flex flex-col justify-center items-center h-screen'>
@@ -16,8 +18,10 @@ export default function page3(){
                 <div className="fixed font-bold mb-55 mr-40">Menu</div>
 
                 <div id="botoes" className="fixed mt-30 flex flex-col gap-4">
-                    <button className="flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-10 rounded-lg transition duration-300">
+                    <Link href='/cadastro'>
+                    <button className="flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-12 rounded-lg transition duration-300">
                         <img src="src=/../cadastro.png" alt="icone_cadastro" className="w-5 h-5 mr-2" />Cadastro</button>
+                    </Link>
 
                     <button className="flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-10 rounded-lg transition duration-300">
                         <img src="src=/../volume.png" alt="icone_alarme" className="w-5 h-5 mr-3" />Alarme</button>

@@ -16,10 +16,14 @@ export default function cadastro() {
       return;
     }
     if (valor === "Entra" && senhaDigitada.length == maxCaracteres) {
-      router.push("/pagina3"); // ✅ Redireciona para page3
+      router.push("/cadastro2"); 
       return;
     }
 
+    if (valor === "Entra" && senhaDigitada.length !== maxCaracteres) {
+      router.push("/cadastro3"); 
+      return;
+    }
 
     if (!isNaN(Number(valor)) && senhaDigitada.length < maxCaracteres) {
       setSenhaDigitada(senhaDigitada + "*");
