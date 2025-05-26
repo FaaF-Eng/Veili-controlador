@@ -1,4 +1,4 @@
-export default function cadastro2(){
+export default function cadastro3(){
     return(
         <div className=' flex flex-col justify-center items-center h-screen'>
             <div className="fixed flex flex-col justify-center items-center h-screen p-0">
@@ -15,8 +15,9 @@ export default function cadastro2(){
                 </div>
                 <div className="text-[15px] fixed font-bold mb-55 mr-34">Cadastro</div>
                 <div className="text-[12px] fixed font-bold mb-30">Operador:</div>
-                <img className="fixed h-25 w-25 mt-10" src="src=/../check.png" alt="check" />
-                <div className="text-[12px] fixed font-bold mt-60">Senha cadastrada com sucesso!!!</div>
+                <img className="fixed h-25 w-25 mt-10" src="src=/../alert.png" alt="nocheck" />
+                <div className="text-[12px] fixed font-bold mt-60">Senha não cadastrada!!!</div>
+                <div className="text-[10px] fixed font-bold mt-70">Digite uma senha de 4 números</div>
 
             </div>
             
