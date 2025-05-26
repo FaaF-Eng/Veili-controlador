@@ -3,7 +3,7 @@ import { useState } from 'react'; // ✅ Importação no topo do arquivo
 import { useRouter } from 'next/navigation';
 
 
-export default function pagina2() {
+export default function cadastro() {
   console.log('TypeScript funciona;');
 
   const [senhaDigitada, setSenhaDigitada] = useState(""); // [Adicionado] Estado que armazena os * digitados
@@ -41,7 +41,7 @@ export default function pagina2() {
         <div className=' fixed flex justify-center items-center mb-150 '>
           <img src="src=/../veili.png" alt="outralogo" className='mt-100 h-10 z-999' />
         </div>
-        <div className="fixed font-bold mb-55 mr-40">Login</div>
+        <div className="text-[15px] fixed font-bold mb-55 mr-34">Cadastro</div>
         <div className='fixed font-bold mb-35' >Digite a senha</div>
 
       
