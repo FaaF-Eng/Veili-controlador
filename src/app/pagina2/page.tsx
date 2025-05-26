@@ -1,0 +1,70 @@
+'use client'
+import { useState } from 'react'; // ✅ Importação no topo do arquivo
+
+
+export default function pagina2() {
+  console.log('TypeScript funciona;');
+
+  const [senhaDigitada, setSenhaDigitada] = useState(""); // [Adicionado] Estado que armazena os * digitados
+  const maxCaracteres = 4; // [Adicionado] Limite máximo de caracteres
+
+  const handleClick = (valor: string) => { // [Adicionado] Lógica que trata os cliques dos botões
+    if (valor === "Anula") {
+      setSenhaDigitada("");
+      return;
+    }
+
+    if (!isNaN(Number(valor)) && senhaDigitada.length < maxCaracteres) {
+      setSenhaDigitada(senhaDigitada + "*");
+    }
+  };
+
+  return (
+    <div className=' flex flex-col justify-center items-center h-screen'>
+      <div className="fixed flex flex-col justify-center items-center h-screen p-0">
+        <img  
+          src="/display.png" 
+          alt="display"
+          className="w-85  h-auto z-99 select-none"
+        />   
+      </div>
+
+      {/* Campo visual para mostrar os * */}
+      <div className="fixed inset-0 flex items-center justify-center mt-20">
+        <div className=' fixed flex justify-center items-center mb-150 '>
+          <img src="src=/../veili.png" alt="outralogo" className='mt-100 h-10 z-999' />
+        </div>
+        <div className='fixed font-bold mb-35' >Digite a senha</div>
+
+      
+
+
+        <div id="campoSenha" className="text-2xl font-bold text-black">
+          {senhaDigitada}
+        </div>
+      </div>
+
+      <div className="fixed inset-0 flex items-center justify-center mt-45">
+        <div className="mt-70 w-fit h-90 overflow-hidden break-words">
+          <div id='botoes' className="grid grid-cols-3 grid-rows-4 gap-x-[1px] gap-y-[2px]">
+            {[
+              "1", "2", "3",
+              "4", "5", "6",
+              "7", "8", "9",
+              "Anula", "0", "Entra"
+            ].map((label, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleClick(label)} // ✅ Evento conectado
+                className="w-10 h-10 bg-[#f3870c] text-white rounded-[6px] text-[10px] p-0 m-0 leading-none
+                           cursor-pointer transition-colors duration-300 hover:bg-orange-600"
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
