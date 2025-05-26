@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'; // ✅ Importação no topo do arquivo
+import { useRouter } from 'next/navigation';
 
 
 export default function pagina2() {
@@ -7,12 +8,18 @@ export default function pagina2() {
 
   const [senhaDigitada, setSenhaDigitada] = useState(""); // [Adicionado] Estado que armazena os * digitados
   const maxCaracteres = 4; // [Adicionado] Limite máximo de caracteres
+  const router = useRouter(); // ✅ Inicialização do roteador
 
   const handleClick = (valor: string) => { // [Adicionado] Lógica que trata os cliques dos botões
     if (valor === "Anula") {
       setSenhaDigitada("");
       return;
     }
+    if (valor === "Entra" && senhaDigitada.length == maxCaracteres) {
+      router.push("/pagina3"); // ✅ Redireciona para page3
+      return;
+    }
+
 
     if (!isNaN(Number(valor)) && senhaDigitada.length < maxCaracteres) {
       setSenhaDigitada(senhaDigitada + "*");
