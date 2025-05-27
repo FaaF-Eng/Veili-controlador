@@ -9,6 +9,7 @@ export default function page3(){
                     alt="display"
                     className="w-85  h-auto z-99 select-none"></img>
             </div>
+            <div className='fixed  mt-50 mr-30' style={{ zIndex: -1 }}><img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" /></div>
 
             
             <div className="fixed inset-0 flex items-center justify-center mt-20 ">

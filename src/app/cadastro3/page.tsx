@@ -7,6 +7,7 @@ export default function cadastro3(){
                     alt="display"
                     className="w-85  h-auto z-99 select-none"></img>
             </div>
+            
 
             
             <div className="fixed inset-0 flex items-center justify-center mt-20 select-none">
@@ -20,6 +21,8 @@ export default function cadastro3(){
                 <div className="text-[10px] fixed font-bold mt-70">Digite uma senha de 4 números</div>
 
             </div>
+            <div className='fixed  mt-50 mr-30' style={{ zIndex: -1 }}><img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" /></div>
+
             
         
 

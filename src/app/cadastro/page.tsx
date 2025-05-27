@@ -45,8 +45,10 @@ export default function cadastro() {
         <div className=' fixed flex justify-center items-center mb-150 '>
           <img src="src=/../veili.png" alt="outralogo" className='mt-100 h-10 z-999' />
         </div>
+        
         <div className="text-[15px] fixed font-bold mb-55 mr-34">Cadastro</div>
         <div className='fixed font-bold mb-35' >Digite a senha</div>
+        
 
       
 
@@ -55,6 +57,8 @@ export default function cadastro() {
           {senhaDigitada}
         </div>
       </div>
+      <div className='fixed  mt-50 mr-30' style={{ zIndex: -1 }}><img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" /></div>
+      
 
       <div className="fixed inset-0 flex items-center justify-center mt-45">
         <div className="mt-70 w-fit h-90 overflow-hidden break-words">
