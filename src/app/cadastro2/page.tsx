@@ -19,6 +19,8 @@ export default function cadastro2(){
                 <div className="text-[12px] fixed font-bold mt-60">Senha cadastrada com sucesso!!!</div>
 
             </div>
+            <div className='fixed  mt-50 mr-30' style={{ zIndex: -1 }}><img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" /></div>
+
             
         
 

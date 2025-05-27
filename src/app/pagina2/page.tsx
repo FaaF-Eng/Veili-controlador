@@ -33,9 +33,11 @@ export default function pagina2() {
           src="/display.png" 
           alt="display"
           className="w-85  h-auto z-99 select-none"
-        />   
+        />
+          
       </div>
-
+      <div className='fixed  mt-50 mr-30' style={{ zIndex: -1 }}><img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" /></div> 
+      
       {/* Campo visual para mostrar os * */}
       <div className="fixed inset-0 flex items-center justify-center mt-20">
         <div className=' fixed flex justify-center items-center mb-150 '>
