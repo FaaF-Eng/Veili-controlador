@@ -1,6 +1,8 @@
 'use client'
 import { useState } from 'react'; // ✅ Importação no topo do arquivo
 import { useRouter } from 'next/navigation';
+import { useCallback } from 'react'; //Para música
+
 
 
 export default function pagina2() {
@@ -10,7 +12,15 @@ export default function pagina2() {
   const maxCaracteres = 4; // [Adicionado] Limite máximo de caracteres
   const router = useRouter(); // ✅ Inicialização do roteador
 
+  const playSound = useCallback(() => {
+  const audio = new Audio("/sounds/click.mp3"); // Caminho dentro da pasta public
+  audio.play();
+  }, []);
+
+
+
   const handleClick = (valor: string) => { // [Adicionado] Lógica que trata os cliques dos botões
+    playSound();
     if (valor === "Anula") {
       setSenhaDigitada("");
       return;
