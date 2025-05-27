@@ -36,6 +36,8 @@ export default function Page3() {
         <img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" />
       </div>
 
+      <div className='fixed mt-50 mr-30' style={{zIndex: 0}}><img className='h-20 opacity-50 ml-20 rotate-340' src="src=/../sirene.png" alt="sirene" /></div>
+
       <div className="fixed inset-0 flex items-center justify-center mt-20">
         <div className='fixed flex justify-center items-center mb-150'>
           <img src="src=/../veili.png" alt="outralogo" className='mt-100 h-10 z-999' />
@@ -80,7 +82,7 @@ export default function Page3() {
         </div>
 
         <div id="back" className="fixed mt-105 mr-35 flex flex-col gap-4">
-          <button onClick={playSound} className="flex flex-col items-center">
+          <button onClick={() => playSoundAndNavigate('/')} className="flex flex-col items-center">
             <img src="src=/../back.png" alt="voltar" className="w-5 h-5" />
             Voltar
           </button>
