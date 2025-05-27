@@ -1,4 +1,20 @@
+'use client'; // ✅ Necessário para usar hooks e navegação
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation'; // ✅ Hook de navegação do Next.js
+
 export default function cadastro2(){
+   const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push('/'); // ✅ Redireciona para a Home após 5 segundos
+    }, 5000);
+
+        return () => clearTimeout(timer); // ✅ Limpa o timer se o componente for desmontado
+  }, [router]);
+
+
     return(
         <div className=' flex flex-col justify-center items-center h-screen'>
             <div className="fixed flex flex-col justify-center items-center h-screen p-0">
