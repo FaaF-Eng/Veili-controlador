@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="public/screen.png" alt="imagem site">
+<img src="/public/screen.png" alt="imagem site">
 
 > 🔊 Veili Siren Controller Sim é um site interativo que simula o funcionamento real do produto Controlador de Sirenes da Veili. Desenvolvido com Next.js, TypeScript e Tailwind CSS, permite ao usuário testar todas as funcionalidades do equipamento diretamente no navegador — como acionar sirenes, configurar horários e alternar modos de operação. Uma ferramenta simples, prática e eficiente pensada para demonstrar o produto de forma realista e melhorar o marketing com testes online!
 
