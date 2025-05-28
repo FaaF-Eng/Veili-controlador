@@ -1,5 +1,5 @@
 'use client'; //  Adicionado para permitir uso de hooks e interatividade
-
+import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation'; //  Adicionado para redirecionamento manual
 import Link from "next/link";
@@ -15,6 +15,19 @@ export default function relatorio() {
       router.push(path); // Redireciona após tocar o som
     }, 150); // Pequeno delay para o som iniciar
   }, [router]);
+
+   const router2 = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router2.push('/relatorio2'); // ✅ Redireciona para a Home após 5 segundos
+    }, 5000);
+
+        return () => clearTimeout(timer); // ✅ Limpa o timer se o componente for desmontado
+  }, [router]);
+
+
+  
 
   //  Função que apenas toca o som (sem navegação)
   const playSound = useCallback(() => {
