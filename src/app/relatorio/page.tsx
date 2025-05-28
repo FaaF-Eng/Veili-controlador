@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 import { useRouter } from 'next/navigation'; //  Adicionado para redirecionamento manual
 import Link from "next/link";
 
-export default function Page3() {
+export default function relatorio() {
   const router = useRouter(); // ✅ Instância do roteador do Next.js
 
   //  Função que toca o som e redireciona após um pequeno delay
@@ -21,6 +21,7 @@ export default function Page3() {
     const audio = new Audio("/sounds/click.mp3");
     audio.play();
   }, []);
+  
 
   return (
     <div className='flex flex-col justify-center items-center h-screen select-none'>
@@ -37,6 +38,24 @@ export default function Page3() {
             <div className="font-bold break-words text-center"style={{ fontSize: '9px'}} >Conecte-se à rede Veili e aguarde a transferência de dados</div>
         </div>
         <div className='fixed rounded mt-45 h-65 w-45 bg-gray-500 opacity-30'style={{zIndex: 0}}></div>
+        <div className='fixed mt-13 font-bold'style={{ fontSize: '10px'}}>Aguarde...Transferindo</div>
+        <div className="fixed mt-20 w-30 h-1 bg-gradient-to-r from-black via-gray-800 to-black overflow-hidden rounded relative">
+          <div className="absolute top-0 left-0 h-full w-20 bg-orange-500 animate-[slide_1.5s_linear_infinite]" />
+        </div>
+
+        <div className='mt-90 fixed flex space-x-2' id='alinha transferencia'>
+          <img className='h-10' src="src=/../sdcard.png" alt="sdcard" />
+          <div className="flex space-x-2 items-center justify-center">
+            <div className="dot delay-[0ms]" />
+            <div className="dot delay-[150ms]" />
+            <div className="dot delay-[300ms]" />
+            <div className="dot delay-[450ms]" />
+            <div className="dot delay-[600ms]" />
+            <div className="dot delay-[750ms]" />
+          </div>
+          <img className='h-10' src="src=/../hand.png" alt="hand" />
+        </div>
+
 
       <div className='fixed mt-50 mr-30' style={{ zIndex: -1 }}>
         <img className='h-97' src="src=/../exclamacao.png" alt="exclamacao" />
