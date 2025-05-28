@@ -65,7 +65,7 @@ export default function Page3() {
           </button>
 
           <button 
-            onClick={playSound} 
+            onClick={() => playSoundAndNavigate('/relatorio')} 
             className="flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-10 rounded-lg transition duration-300"
           >
             <img src="src=/../relatorio.png" alt="icone_relatorio" className="w-5 h-5 mr-3" />
