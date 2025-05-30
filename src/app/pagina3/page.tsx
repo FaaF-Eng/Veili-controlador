@@ -57,7 +57,7 @@ export default function Page3() {
 
           {/*  Só toca o som (sem redirecionamento) */}
           <button 
-            onClick={playSound} 
+            onClick={() => playSoundAndNavigate('/alarmes')}
             className="flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-10 rounded-lg transition duration-300"
           >
             <img src="src=/../volume.png" alt="icone_alarme" className="w-5 h-5 mr-3" />
@@ -81,7 +81,7 @@ export default function Page3() {
           </button>                   
         </div>
 
-        <div id="back" className="fixed mt-105 mr-35 flex flex-col gap-4">
+      <div id="back" className="fixed mt-105 mr-35 flex flex-col gap-4">
           <button onClick={() => playSoundAndNavigate('/')} className="flex flex-col items-center">
             <img src="src=/../back.png" alt="voltar" className="w-5 h-5" />
             Voltar
