@@ -30,17 +30,6 @@ export default function alarmes2() {
     audio.play();
   }, []);
   
-const [alarmeIndex, setAlarmeIndex] = useState(0);
-  const alarmes = ["Alarme 1", "Alarme 2", "Alarme 3"];
-
-  const anterior = () => {
-    setAlarmeIndex((prev) => (prev - 1 + alarmes.length) % alarmes.length);
-  };
-
-  const proximo = () => {
-    setAlarmeIndex((prev) => (prev + 1) % alarmes.length);
-  };
-
 
 
   return (
@@ -58,7 +47,7 @@ const [alarmeIndex, setAlarmeIndex] = useState(0);
             <div className="font-bold break-words text-center"style={{ fontSize: '11px'}} >Reproduzindo som:</div>
         </div>
 
-        <div className="fixed rounded mt-55  h-65 w-45 overflow-hidden p-4" style={{zIndex: 1}}>
+        <div className="fixed rounded mt-55  h-65 w-45 overflow-hidden " style={{zIndex: 1}}>
             <div className="break-words text-center"style={{ fontSize: '11px'}} >Faixa</div>
         </div>
 
@@ -71,7 +60,9 @@ const [alarmeIndex, setAlarmeIndex] = useState(0);
 
 
         <div className='fixed mt-94' style={{zIndex: 1}}>
-            <button id='botaoquadrado'onClick={playSound}  className='flex items-center rounded-full justify-center w-13 h-13 bg-[#f3870c] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
+            <button id='botaoquadrado'onClick={() => {playSoundAndNavigate('/alarmes');
+            sessionStorage.setItem('recarregado', 'false'); // flag para recarregar uma vez
+}}  className='flex items-center rounded-full justify-center w-13 h-13 bg-[#f3870c] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
               <img src="src=/../quadrado.png" alt="icone_quadrado" className="w-5 h-5" />
             </button>
             <div className='flex items-center justify-center font-bold'style={{ fontSize: '10px'}}>Stop</div>
@@ -92,12 +83,7 @@ const [alarmeIndex, setAlarmeIndex] = useState(0);
 
         <div className="fixed font-bold mb-56 mr-34">Alarmes</div>
 
-        <div id="back" className="fixed mt-105 mr-35 flex flex-col gap-4">
-          <button onClick={() => playSoundAndNavigate('/pagina3')} className="flex flex-col items-center cursor-pointer">
-            <img src="src=/../back.png" alt="voltar" className="w-5 h-5" />
-            Voltar
-          </button>
-        </div>
+ 
       </div>
 
       
