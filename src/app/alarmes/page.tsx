@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation'; //  Adicionado para redirecionamento manual
+import { useState } from "react";
 import Link from "next/link";
 
 export default function alarmes() {
@@ -23,6 +24,18 @@ export default function alarmes() {
     audio.play();
   }, []);
   
+const [alarmeIndex, setAlarmeIndex] = useState(0);
+  const alarmes = ["Alarme 1", "Alarme 2", "Alarme 3"];
+
+  const anterior = () => {
+    setAlarmeIndex((prev) => (prev - 1 + alarmes.length) % alarmes.length);
+  };
+
+  const proximo = () => {
+    setAlarmeIndex((prev) => (prev + 1) % alarmes.length);
+  };
+
+
 
   return (
     <div className='flex flex-col justify-center items-center h-screen select-none'>
@@ -39,9 +52,12 @@ export default function alarmes() {
             <div className="font-bold break-words text-center"style={{ fontSize: '11px'}} >Selecione o tipo de sirene</div>
         </div>
 
+      
 
-        <div className='fixed mt-25' style={{zIndex: 1}}>
-            <button id='botaoplay' className='flex items-center justify-center w-40 h-8 bg-[#f3870c] font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none'>
+
+
+        <div onClick={playSound} className='fixed mt-25' style={{zIndex: 1}}>
+            <button id='botaoplay' className='flex items-center justify-center w-40 h-8 bg-[#f3870c] font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
               Selecione na Lista<img src="src=/../play3.png" alt="icone_play3" className="w-5 h-5" />
             </button>
         </div>
@@ -69,8 +85,6 @@ export default function alarmes() {
 
         <div className="fixed font-bold mb-56 mr-34">Alarmes</div>
 
-        
-
         <div id="back" className="fixed mt-105 mr-35 flex flex-col gap-4">
           <button onClick={() => playSoundAndNavigate('/pagina3')} className="flex flex-col items-center cursor-pointer">
             <img src="src=/../back.png" alt="voltar" className="w-5 h-5" />
@@ -78,6 +92,29 @@ export default function alarmes() {
           </button>
         </div>
       </div>
+
+      
+    <div className="flex items-center justify-center"style={{zIndex:999999999999999999}}>
+      <button
+        onClick={() => { proximo(); playSound(); }}
+        className="px-0 py-2 "
+      >
+        <img src="src=/../play4.png" alt="icone_play4" className="w-5 h-5" />
+      </button>
+
+      <div className="px-8 text-[15px] font-semibold text-center">
+        {alarmes[alarmeIndex]}
+      </div>
+
+      <button
+        onClick={() => { proximo(); playSound(); }} 
+        className="px-0 py-2"
+      >
+        <img src="src=/../play3.png" alt="icone_play3" className="w-5 h-5" />  
+      </button>
+    </div>
+  
+
     </div>
   );
 }
