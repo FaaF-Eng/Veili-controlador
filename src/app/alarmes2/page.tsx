@@ -5,8 +5,14 @@ import { useRouter } from 'next/navigation'; //  Adicionado para redirecionament
 import { useState } from "react";
 import Link from "next/link";
 
-export default function alarmes() {
-  const router = useRouter(); // ✅ Instância do roteador do Next.js
+export default function alarmes2() {
+
+ 
+  useEffect(() => {
+    const audio2 = new Audio("/sounds/alarme_sirene.mp3");
+    audio2.play().catch((e) => console.warn("Erro ao tocar som:", e));
+  }, []); // roda só uma vez, quando a página carrega
+    const router = useRouter(); // ✅ Instância do roteador do Next.js
 
   //  Função que toca o som e redireciona após um pequeno delay
   const playSoundAndNavigate = useCallback((path: string) => {
@@ -49,34 +55,28 @@ const [alarmeIndex, setAlarmeIndex] = useState(0);
 
       
         <div className="fixed rounded mt-43 h-65 w-45 overflow-hidden p-4" style={{zIndex: 1}}>
-            <div className="font-bold break-words text-center"style={{ fontSize: '11px'}} >Selecione o tipo de sirene</div>
+            <div className="font-bold break-words text-center"style={{ fontSize: '11px'}} >Reproduzindo som:</div>
         </div>
 
-      
-
-
-
-        <div onClick={playSound} className='fixed mt-25' style={{zIndex: 1}}>
-            <button id='botaoplay' className='flex items-center justify-center w-40 h-8 bg-[#f3870c] font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-              Selecione na Lista<img src="src=/../play3.png" alt="icone_play3" className="w-5 h-5" />
-            </button>
+        <div className="fixed rounded mt-55  h-65 w-45 overflow-hidden p-4" style={{zIndex: 1}}>
+            <div className="break-words text-center"style={{ fontSize: '11px'}} >Faixa</div>
         </div>
 
-       <div  className='fixed mt-48' style={{zIndex: 2}}>
-            <button id='botaoplay' className='flex items-center justify-center w-40 h-10 bg-[#f7a447] font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none '>
-              Região | Setor | Sirene | Situação
-            </button>
+        <div className='mt-30 h-10 w-10'style={{zIndex: 1}}>
+            <img src="src=/../volume.png" alt="alarmevolume" />
         </div>
+    
+
        
 
 
         <div className='fixed mt-94' style={{zIndex: 1}}>
-            <button id='botaoplay'onClick={playSound}  className='flex items-center justify-center w-40 h-10 bg-[#f3870c] text-white rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-              <img src="src=/../play.png" alt="icone_play" className="w-5 h-5" />
+            <button id='botaoquadrado'onClick={playSound}  className='flex items-center rounded-full justify-center w-13 h-13 bg-[#f3870c] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
+              <img src="src=/../quadrado.png" alt="icone_quadrado" className="w-5 h-5" />
             </button>
-            <div className='flex items-center justify-center font-bold'style={{ fontSize: '10px'}}>Play</div>
+            <div className='flex items-center justify-center font-bold'style={{ fontSize: '10px'}}>Stop</div>
         </div>
-        
+    
         <div className='fixed rounded mt-45 h-65 w-45 bg-gray-500 opacity-30'style={{zIndex: 0}}></div>
 
       <div className='fixed mt-50 mr-30' style={{ zIndex: -1 }}>
@@ -101,25 +101,7 @@ const [alarmeIndex, setAlarmeIndex] = useState(0);
       </div>
 
       
-    <div className="flex items-center justify-center"style={{zIndex:999999999999999999}}>
-      <button
-        onClick={() => { proximo(); playSound(); }}
-        className="px-0 py-2 "
-      >
-        <img src="src=/../play4.png" alt="icone_play4" className="w-5 h-5" />
-      </button>
 
-      <div className="px-8 text-[15px] font-semibold text-center">
-        {alarmes[alarmeIndex]}
-      </div>
-
-      <button
-        onClick={() => { proximo(); playSound(); }} 
-        className="px-0 py-2"
-      >
-        <img src="src=/../play3.png" alt="icone_play3" className="w-5 h-5" />  
-      </button>
-    </div>
   
 
     </div>
