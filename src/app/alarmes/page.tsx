@@ -41,7 +41,7 @@ export default function alarmes() {
 
 
         <div className='fixed mt-25' style={{zIndex: 1}}>
-            <button id='botaoplay' className='flex items-center justify-center w-40 h-10 bg-[#f3870c] font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none'>
+            <button id='botaoplay' className='flex items-center justify-center w-40 h-8 bg-[#f3870c] font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none'>
               Selecione na Lista<img src="src=/../play3.png" alt="icone_play3" className="w-5 h-5" />
             </button>
         </div>
@@ -72,7 +72,7 @@ export default function alarmes() {
         
 
         <div id="back" className="fixed mt-105 mr-35 flex flex-col gap-4">
-          <button onClick={() => playSoundAndNavigate('/')} className="flex flex-col items-center">
+          <button onClick={() => playSoundAndNavigate('/pagina3')} className="flex flex-col items-center cursor-pointer">
             <img src="src=/../back.png" alt="voltar" className="w-5 h-5" />
             Voltar
           </button>
