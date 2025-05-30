@@ -11,6 +11,14 @@ export default function cadastro() {
   const maxCaracteres = 4; // [Adicionado] Limite máximo de caracteres
   const router = useRouter(); // ✅ Inicialização do roteador
 
+    const playSoundAndNavigate = useCallback((path: string) => {
+    const audio = new Audio("/sounds/click.mp3");
+    audio.play();
+    setTimeout(() => {
+      router.push(path); // Redireciona após tocar o som
+    }, 150); // Pequeno delay para o som iniciar
+  }, [router]);
+  
   const playSound = useCallback(() => {
   const audio = new Audio("/sounds/click.mp3"); // Caminho dentro da pasta public
   audio.play();
@@ -88,6 +96,12 @@ export default function cadastro() {
           </div>
         </div>
       </div>
+            <div id="back" className="fixed mt-125 mr-35 flex flex-col gap-4">
+          <button onClick={() => playSoundAndNavigate('/pagina3')} className="flex flex-col items-center cursor-pointer">
+            <img src="src=/../back.png" alt="voltar" className="w-5 h-5" />
+            Voltar
+          </button>
+        </div>
     </div>
   );
 }
