@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'; //  Adicionado para redirecionament
 import { useState } from "react";
 import Link from "next/link";
 
-export default function lista1() {
+export default function lista4() {
   
 
 
@@ -45,8 +45,15 @@ export default function lista1() {
      
     <div className="fixed flex items-center justify-center mt-125 ml-40 "style={{zIndex:99}}>
         <button
-        onClick={() => playSoundAndNavigate('/lista2')}  className="px-0 py-2">
+        onClick={() => playSoundAndNavigate('/lista5')}  className="px-0 py-2">
         <img src="src=/../play3.png" alt="icone" className="w-5 h-5" />  
+        </button>
+    </div>
+
+    <div className="fixed flex items-center justify-center mt-125 mr-40 "style={{zIndex:99}}>
+        <button
+        onClick={() => playSoundAndNavigate('/lista3')}  className="px-0 py-2">
+        <img src="src=/../play4.png" alt="icone" className="w-5 h-5" />  
         </button>
     </div>
 
@@ -56,44 +63,44 @@ export default function lista1() {
         
         <div  onClick={() => playSoundAndNavigate('/alarmes2')} className='fixed mb-5 flex mr-4 items-center justify-center w-40 h-8' style={{zIndex: 2}}>
             <button className='flex items-center justify-center w-35 h-8 bg-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-                Faixa 1<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
+                Faixa 16<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
         </div>
         <div className='flex fixed items-center justify-center mb-5 mt-3 w-40 h-8 bg-[#f3870c] text-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none' style={{zIndex: 1}}>
-            <div className='ml-35 font-bold'>01</div>
+            <div className='ml-35 font-bold'>16</div>
         </div>
 
   
         <div  onClick={() => playSoundAndNavigate('/alarmes2')} className='fixed mt-20 flex mr-4 items-center justify-center w-40 h-8' style={{zIndex: 2}}>
             <button className='flex items-center justify-center w-35 h-8 bg-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-                Faixa 2<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
+                Faixa 17<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
         </div>
         <div className='flex fixed items-center mt-23 justify-center w-40 h-8 bg-[#f3870c] text-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none' style={{zIndex: 1}}>
-            <div className='ml-35 font-bold'>02</div>
+            <div className='ml-35 font-bold'>17</div>
         </div>
 
         <div  onClick={() => playSoundAndNavigate('/alarmes2')} className='fixed mt-45 flex mr-4 items-center justify-center w-40 h-8' style={{zIndex: 2}}>
             <button className='flex items-center justify-center w-35 h-8 bg-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-                Faixa 3<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
+                Faixa 18<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
         </div>
         <div className='flex fixed items-center mt-48 justify-center w-40 h-8 bg-[#f3870c] text-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none' style={{zIndex: 1}}>
-            <div className='ml-35 font-bold'>03</div>
+            <div className='ml-35 font-bold'>18</div>
         </div>
 
 
         <div  onClick={() => playSoundAndNavigate('/alarmes2')} className='fixed mt-70 flex mr-4 items-center justify-center w-40 h-8' style={{zIndex: 2}}>
             <button className='flex items-center justify-center w-35 h-8 bg-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-                Faixa 4<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
+                Faixa 19<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
         </div>
         <div className='flex fixed items-center mt-73 justify-center w-40 h-8 bg-[#f3870c] text-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none' style={{zIndex: 1}}>
-            <div className='ml-35 font-bold'>04</div>
+            <div className='ml-35 font-bold'>19</div>
         </div>
         
         <div  onClick={() => playSoundAndNavigate('/alarmes2')} className='fixed mt-95 flex mr-4 items-center justify-center w-40 h-8' style={{zIndex: 2}}>
             <button className='flex items-center justify-center w-35 h-8 bg-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none cursor-pointer transition-colors duration-300 hover:bg-orange-600'>
-                Faixa 5<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
+                Faixa 20<img src="src=/../volume.png" alt="icone_volume" className="w-5 h-5 ml-5" /></button>
         </div>
         <div className='flex fixed items-center mt-98 justify-center w-40 h-8 bg-[#f3870c] text-white font-bold rounded-[6px] text-[10px] p-0 m-0 leading-none' style={{zIndex: 1}}>
-            <div className='ml-35 font-bold'>05</div>
+            <div className='ml-35 font-bold'>20</div>
         </div>
 
 
@@ -108,7 +115,7 @@ export default function lista1() {
             <div className='fixed flex justify-center items-center mb-150'>
             <img src="src=/../veili.png" alt="outralogo" className='mt-100 h-10 z-999' />
             </div>
-            <div className="fixed font-bold mb-56 mr-34">Lista 1</div>
+            <div className="fixed font-bold mb-56 mr-34">Lista 4</div>
         </div>
     </div>
   );
